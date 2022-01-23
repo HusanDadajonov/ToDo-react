@@ -1,24 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import Form from "./Form/Form";
+import { useState } from "react";
+import Contact from "./Contacts/Contact";
+import Search from "./Contacts/Search/Search";
 
 function App() {
+  const [NameVal,SetNameVal] = useState("");
+  const [RelationshipVal,SetRelationshipVal] = useState("");
+  const [PhonepVal,SetPhonepVal] = useState("");
+  const [AllUsers,SetAllUsers] = useState([]);
+  const [Arr,SetArr] = useState([]);
+  const [SearchVal,SetSearchVal] = useState("");
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <>
+    <Search SetSearchVal = {SetSearchVal}/>
+    <div className="box row">
+      <Form SetNameVal = {SetNameVal}
+      SetRelationshipVal = {SetRelationshipVal} 
+      SetPhonepVal = {SetPhonepVal} 
+      PhonepVal = {PhonepVal} 
+      RelationshipVal = {RelationshipVal} 
+      NameVal = {NameVal}
+      SetArr = {SetArr}
+      SetAllUsers = {SetAllUsers}
+    />
+      <Contact Arr = {Arr} AllUsers = {AllUsers} SetArr = {SetArr} SearchVal = {SearchVal}/>
     </div>
+    </>
   );
 }
 
