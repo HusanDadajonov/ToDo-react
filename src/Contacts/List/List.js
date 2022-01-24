@@ -3,7 +3,7 @@ import Item from "./Item/Item"
 function List({Arr,SearchVal,SetArr}){
     if(Arr.length > 0){
         if(SearchVal != ""){
-            const SearchFilter = Arr.filter(item => item.name.includes(SearchVal));
+            const SearchFilter = Arr.filter(item => item.name.toLowerCase().includes(SearchVal.toLowerCase()));
             return (
                 <ul className="box__list list-unstyled d-flex flex-column">
                     { SearchFilter.map(item => (
