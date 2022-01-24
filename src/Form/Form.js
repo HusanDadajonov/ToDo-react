@@ -30,7 +30,7 @@ function Form({SetNameVal,SetRelationshipVal,SetPhonepVal,NameVal,RelationshipVa
           </datalist>
         </div>
         <div className="mb-3">
-          <input type="tell" value={PhonepVal} pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%\^&\*])(?=.{8,})" className="inputs inp-phone form-control" id="exampleInputPassword1" placeholder="Phone" autoComplete="off" required onChange={(e)=> SetPhonepVal(e.target.value)} />
+          <input type="tell" value={PhonepVal}  className="inputs inp-phone form-control" id="exampleInputPassword1" placeholder="Phone" autoComplete="off" required onChange={(e)=> SetPhonepVal(e.target.value)} />
         </div>
         <button type="submit" className="btn btn-primary">Add Contact</button>
       </form>
